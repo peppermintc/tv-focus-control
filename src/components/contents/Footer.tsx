@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FOOTER_ROW } from "../../App";
+import { FOOTER_ROW } from "../../data";
 import { FocusPosition } from "../../interfaces";
 
 interface FooterProps {

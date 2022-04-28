@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HEADER_ROW } from "../../App";
+import { HEADER_ROW } from "../../data";
 import { FocusPosition } from "../../interfaces";
 
 interface HeaderProps {

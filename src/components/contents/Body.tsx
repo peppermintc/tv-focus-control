@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BODY_ROW } from "../../App";
+import { BODY_ROW } from "../../data";
 import { FocusPosition } from "../../interfaces";
 
 interface BodyProps {
