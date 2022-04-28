@@ -31,7 +31,10 @@ const HDPage = () => {
   });
 
   const onUpClick = () => {
-    console.log("onUpClick");
+    setCurrentFocus({
+      ...currentFocus,
+      row: currentFocus.row - 1,
+    });
   };
 
   const onRightClick = () => {
@@ -42,7 +45,10 @@ const HDPage = () => {
   };
 
   const onDownClick = () => {
-    console.log("onDownClick");
+    setCurrentFocus({
+      ...currentFocus,
+      row: currentFocus.row + 1,
+    });
   };
 
   const onLeftClick = () => {

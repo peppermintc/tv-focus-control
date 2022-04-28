@@ -52,6 +52,7 @@
 
 import styled from "styled-components";
 import { FocusPosition } from "../../pages/HDPage";
+import Body from "./Body";
 import Header from "./Header";
 
 const ContentsContainer = styled.div`
@@ -70,8 +71,8 @@ const Contents = ({ valueArray, currentFocus }: ContentsProps) => {
   return (
     <ContentsContainer>
       <Header valueArray={valueArray} currentFocus={currentFocus} />
-      {/* <Body />
-      <Footer /> */}
+      <Body valueArray={valueArray} currentFocus={currentFocus} />
+      {/* <Footer /> */}
     </ContentsContainer>
   );
 };
