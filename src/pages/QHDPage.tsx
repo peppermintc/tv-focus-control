@@ -5,15 +5,9 @@ import Remote from "../components/hardware/Remote";
 import TV from "../components/hardware/TV";
 import { FocusPosition } from "../interfaces";
 
-export const HEADER_ROW = 0;
-export const BODY_ROW = 1;
-export const FOOTER_ROW = 2;
-
-const VALUE_ARRAY = [
-  ["Menu 1", "Menu 2", "Menu 3", "Menu 4"],
-  ["Content 1", "Content 2", "Content 3", "Content 4", "Content 5"],
-  ["Footer 1", "Footer 2"],
-];
+interface QHDPageProps {
+  valueArray: string[][];
+}
 
 const QHDPageContainer = styled.div`
   width: 100vw;
@@ -24,7 +18,7 @@ const QHDPageContainer = styled.div`
   align-items: center;
 `;
 
-const QHDPage = () => {
+const QHDPage = ({ valueArray }: QHDPageProps) => {
   const [currentFocus, setCurrentFocus] = useState<FocusPosition>({
     row: 0,
     column: 0,
@@ -40,7 +34,7 @@ const QHDPage = () => {
   };
 
   const onRightClick = () => {
-    if (currentFocus.column + 1 > VALUE_ARRAY[currentFocus.row].length - 1)
+    if (currentFocus.column + 1 > valueArray[currentFocus.row].length - 1)
       return;
 
     setCurrentFocus({
@@ -50,7 +44,7 @@ const QHDPage = () => {
   };
 
   const onDownClick = () => {
-    if (currentFocus.row + 1 > VALUE_ARRAY.length - 1) return;
+    if (currentFocus.row + 1 > valueArray.length - 1) return;
 
     setCurrentFocus({
       ...currentFocus,
@@ -75,7 +69,7 @@ const QHDPage = () => {
       });
     };
     resetFocusOnChangeRow();
-  }, [currentFocus.row]);
+  }, [currentFocus.row, valueArray]);
 
   return (
     <QHDPageContainer>
@@ -83,7 +77,7 @@ const QHDPage = () => {
       <TV
         resolution={{ width: 2560, height: 1440 }}
         contents={
-          <Contents valueArray={VALUE_ARRAY} currentFocus={currentFocus} />
+          <Contents valueArray={valueArray} currentFocus={currentFocus} />
         }
       />
       <Remote

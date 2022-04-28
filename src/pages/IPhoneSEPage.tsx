@@ -5,15 +5,9 @@ import Mobile from "../components/hardware/Mobile";
 import Remote from "../components/hardware/Remote";
 import { FocusPosition } from "../interfaces";
 
-export const HEADER_ROW = 0;
-export const BODY_ROW = 1;
-export const FOOTER_ROW = 2;
-
-const VALUE_ARRAY = [
-  ["Menu 1", "Menu 2", "Menu 3", "Menu 4"],
-  ["Content 1", "Content 2", "Content 3", "Content 4", "Content 5"],
-  ["Footer 1", "Footer 2"],
-];
+interface IPhoneSEContainerProps {
+  valueArray: string[][];
+}
 
 const IPhoneSEContainer = styled.div`
   width: 100vw;
@@ -24,7 +18,7 @@ const IPhoneSEContainer = styled.div`
   align-items: center;
 `;
 
-const IPhoneSEPage = () => {
+const IPhoneSEPage = ({ valueArray }: IPhoneSEContainerProps) => {
   const [currentFocus, setCurrentFocus] = useState<FocusPosition>({
     row: 0,
     column: 0,
@@ -40,7 +34,7 @@ const IPhoneSEPage = () => {
   };
 
   const onRightClick = () => {
-    if (currentFocus.column + 1 > VALUE_ARRAY[currentFocus.row].length - 1)
+    if (currentFocus.column + 1 > valueArray[currentFocus.row].length - 1)
       return;
 
     setCurrentFocus({
@@ -50,7 +44,7 @@ const IPhoneSEPage = () => {
   };
 
   const onDownClick = () => {
-    if (currentFocus.row + 1 > VALUE_ARRAY.length - 1) return;
+    if (currentFocus.row + 1 > valueArray.length - 1) return;
 
     setCurrentFocus({
       ...currentFocus,
@@ -75,7 +69,7 @@ const IPhoneSEPage = () => {
       });
     };
     resetFocusOnChangeRow();
-  }, [currentFocus.row]);
+  }, [currentFocus.row, valueArray]);
 
   return (
     <IPhoneSEContainer>
@@ -83,7 +77,7 @@ const IPhoneSEPage = () => {
       <Mobile
         resolution={{ width: 375, height: 667 }}
         contents={
-          <Contents valueArray={VALUE_ARRAY} currentFocus={currentFocus} />
+          <Contents valueArray={valueArray} currentFocus={currentFocus} />
         }
       />
       <Remote

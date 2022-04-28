@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import { HEADER_ROW } from "../../App";
 import { FocusPosition } from "../../interfaces";
-import { HEADER_ROW } from "../../pages/HDPage";
 
 interface HeaderProps {
   valueArray: string[][];
