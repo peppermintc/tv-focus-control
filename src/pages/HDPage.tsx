@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Contents from "../components/contents/Contents";
 import Remote from "../components/hardware/Remote";
@@ -70,6 +70,16 @@ const HDPage = () => {
       column: currentFocus.column - 1,
     });
   };
+
+  useEffect(() => {
+    const resetFocusOnChangeRow = () => {
+      setCurrentFocus({
+        ...currentFocus,
+        column: 0,
+      });
+    };
+    resetFocusOnChangeRow();
+  }, [currentFocus.row]);
 
   return (
     <HDPageContainer>
