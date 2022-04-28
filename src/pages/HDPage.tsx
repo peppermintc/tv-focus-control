@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Remote from "../components/Remote";
-import TV from "../components/TV";
+import Remote from "../components/hardware/Remote";
+import TV from "../components/hardware/TV";
 
 const HDPageContainer = styled.div`
   width: 100vw;
