@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FocusPosition } from "../../pages/HDPage";
-import Footer from "./\bFooter";
+import Footer from "./Footer";
 import Body from "./Body";
 import Header from "./Header";
 
