@@ -1,6 +1,8 @@
 # TV 포커스 컨트롤 연습
 
-2022.4.28
+작업 날짜: 2022.4.28
+
+https://peppermintc.github.io/tv-focus-control/
 
 <img src="./previews/preview.png" alt="preview" />
 
