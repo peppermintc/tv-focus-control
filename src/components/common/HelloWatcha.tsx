@@ -23,7 +23,7 @@ const LogoImg = styled.img`
 const HelloWatcha = () => {
   return (
     <HelloWatchContainer>
-      Hello
+      Hello,
       <LogoImg src={WatchLogo} alt="logo" />
     </HelloWatchContainer>
   );
