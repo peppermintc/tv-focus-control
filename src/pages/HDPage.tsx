@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Remote from "../components/Remote";
 import TV from "../components/TV";
 
 const HDPageContainer = styled.div`
@@ -10,9 +11,28 @@ const HDPageContainer = styled.div`
 `;
 
 const HDPage = () => {
+  const onUpClick = () => {
+    console.log("onUpClick");
+  };
+  const onRightClick = () => {
+    console.log("onRightClick");
+  };
+  const onDownClick = () => {
+    console.log("onDownClick");
+  };
+  const onLeftClick = () => {
+    console.log("onLeftClick");
+  };
+
   return (
     <HDPageContainer>
       <TV resolution={{ width: 1280, height: 720 }} />
+      <Remote
+        onUpClick={onUpClick}
+        onRightClick={onRightClick}
+        onDownClick={onDownClick}
+        onLeftClick={onLeftClick}
+      />
     </HDPageContainer>
   );
 };
