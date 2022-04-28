@@ -1,5 +1,11 @@
+import HDPage from "./pages/HDPage";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <HDPage />
+    </>
+  );
 };
 
 export default App;
