@@ -36,6 +36,7 @@ const FooterItemContainer = styled.div<{ isFocused: boolean }>`
 const FooterItem = ({ value, index, currentFocus }: FooterItemProps) => {
   const isFocused =
     FOOTER_ROW === currentFocus.row && index === currentFocus.column;
+
   return (
     <FooterItemContainer isFocused={isFocused}>{value}</FooterItemContainer>
   );

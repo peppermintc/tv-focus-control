@@ -36,6 +36,7 @@ const HeaderItemContainer = styled.div<{ isFocused: boolean }>`
 const HeaderItem = ({ value, index, currentFocus }: HeaderItemProps) => {
   const isFocused =
     HEADER_ROW === currentFocus.row && index === currentFocus.column;
+
   return (
     <HeaderItemContainer isFocused={isFocused}>{value}</HeaderItemContainer>
   );

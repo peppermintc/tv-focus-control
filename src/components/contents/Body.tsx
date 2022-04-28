@@ -36,6 +36,7 @@ const BodyItemContainer = styled.div<{ isFocused: boolean }>`
 const BodyItem = ({ value, index, currentFocus }: BodyItemProps) => {
   const isFocused =
     BODY_ROW === currentFocus.row && index === currentFocus.column;
+
   return <BodyItemContainer isFocused={isFocused}>{value}</BodyItemContainer>;
 };
 
