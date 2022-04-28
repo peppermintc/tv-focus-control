@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Contents1 from "../components/contents/Contents1";
 import Remote from "../components/hardware/Remote";
 import TV from "../components/hardware/TV";
 
@@ -27,7 +28,7 @@ const HDPage = () => {
 
   return (
     <HDPageContainer>
-      <TV resolution={{ width: 1280, height: 720 }} />
+      <TV resolution={{ width: 1280, height: 720 }} contents={<Contents1 />} />
       <Remote
         onUpClick={onUpClick}
         onRightClick={onRightClick}
