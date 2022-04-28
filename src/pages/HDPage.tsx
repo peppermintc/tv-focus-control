@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import TV from "../components/TV";
 
 const HDPageContainer = styled.div`
   width: 100vw;
@@ -9,7 +10,11 @@ const HDPageContainer = styled.div`
 `;
 
 const HDPage = () => {
-  return <HDPageContainer></HDPageContainer>;
+  return (
+    <HDPageContainer>
+      <TV resolution={{ width: 1280, height: 720 }} />
+    </HDPageContainer>
+  );
 };
 
 export default HDPage;
