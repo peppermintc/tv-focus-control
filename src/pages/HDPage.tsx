@@ -9,6 +9,10 @@ export interface FocusPosition {
   column: number;
 }
 
+export const HEADER_ROW = 0;
+export const BODY_ROW = 1;
+export const FOOTER_ROW = 2;
+
 const VALUE_ARRAY = [
   ["Menu 1", "Menu 2", "Menu 3", "Menu 4"],
   ["Content 1", "Content 2", "Content 3", "Content 4", "Content 5"],
@@ -31,6 +35,8 @@ const HDPage = () => {
   });
 
   const onUpClick = () => {
+    if (currentFocus.row - 1 < 0) return;
+
     setCurrentFocus({
       ...currentFocus,
       row: currentFocus.row - 1,
@@ -38,6 +44,9 @@ const HDPage = () => {
   };
 
   const onRightClick = () => {
+    if (currentFocus.column + 1 > VALUE_ARRAY[currentFocus.row].length - 1)
+      return;
+
     setCurrentFocus({
       ...currentFocus,
       column: currentFocus.column + 1,
@@ -45,6 +54,8 @@ const HDPage = () => {
   };
 
   const onDownClick = () => {
+    if (currentFocus.row + 1 > VALUE_ARRAY.length - 1) return;
+
     setCurrentFocus({
       ...currentFocus,
       row: currentFocus.row + 1,
@@ -52,6 +63,8 @@ const HDPage = () => {
   };
 
   const onLeftClick = () => {
+    if (currentFocus.column - 1 < 0) return;
+
     setCurrentFocus({
       ...currentFocus,
       column: currentFocus.column - 1,

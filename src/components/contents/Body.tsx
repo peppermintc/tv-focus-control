@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { FocusPosition } from "../../pages/HDPage";
-
-const BODY_ROW = 1;
+import { BODY_ROW, FocusPosition } from "../../pages/HDPage";
 
 interface BodyProps {
   valueArray: string[][];
