@@ -8,8 +8,9 @@ interface NavigationBarProps {
 
 const NavigationBarContainer = styled.div`
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   width: 150px;
   border: 5px solid gray;
   background-color: white;
