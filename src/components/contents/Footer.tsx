@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { FocusPosition, FOOTER_ROW } from "../../pages/HDPage";
+import { FocusPosition } from "../../interfaces";
+import { FOOTER_ROW } from "../../pages/HDPage";
 
 interface FooterProps {
   valueArray: string[][];

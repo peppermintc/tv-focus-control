@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { FocusPosition } from "../../pages/HDPage";
 import Footer from "./Footer";
 import Body from "./Body";
 import Header from "./Header";
+import { FocusPosition } from "../../interfaces";
 
 const ContentsContainer = styled.div`
   width: 100%;

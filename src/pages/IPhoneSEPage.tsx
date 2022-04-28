@@ -3,11 +3,7 @@ import styled from "styled-components";
 import Contents from "../components/contents/Contents";
 import Mobile from "../components/hardware/Mobile";
 import Remote from "../components/hardware/Remote";
-
-export interface FocusPosition {
-  row: number;
-  column: number;
-}
+import { FocusPosition } from "../interfaces";
 
 export const HEADER_ROW = 0;
 export const BODY_ROW = 1;
