@@ -19,7 +19,7 @@ const VALUE_ARRAY = [
   ["Footer 1", "Footer 2"],
 ];
 
-const HDPageContainer = styled.div`
+const QHDPageContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -28,7 +28,7 @@ const HDPageContainer = styled.div`
   align-items: center;
 `;
 
-const HDPage = () => {
+const QHDPage = () => {
   const [currentFocus, setCurrentFocus] = useState<FocusPosition>({
     row: 0,
     column: 0,
@@ -82,10 +82,10 @@ const HDPage = () => {
   }, [currentFocus.row]);
 
   return (
-    <HDPageContainer>
-      <h2>HD TV</h2>
+    <QHDPageContainer>
+      <h2>QHD TV</h2>
       <TV
-        resolution={{ width: 1280, height: 720 }}
+        resolution={{ width: 2560, height: 1440 }}
         contents={
           <Contents valueArray={VALUE_ARRAY} currentFocus={currentFocus} />
         }
@@ -96,8 +96,8 @@ const HDPage = () => {
         onDownClick={onDownClick}
         onLeftClick={onLeftClick}
       />
-    </HDPageContainer>
+    </QHDPageContainer>
   );
 };
 
-export default HDPage;
+export default QHDPage;
