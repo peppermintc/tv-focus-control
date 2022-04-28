@@ -21,10 +21,10 @@ const TVContainer = styled.div<TVProps>`
 const TV = ({ resolution, contents }: TVProps) => {
   return (
     <>
+      <TVContainer resolution={resolution}>{contents}</TVContainer>
       <h3>
         Resolution {resolution.width} X {resolution.height}
       </h3>
-      <TVContainer resolution={resolution}>{contents}</TVContainer>
     </>
   );
 };

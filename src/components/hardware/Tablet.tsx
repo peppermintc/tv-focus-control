@@ -21,10 +21,10 @@ const TabletContainer = styled.div<TabletProps>`
 const Tablet = ({ resolution, contents }: TabletProps) => {
   return (
     <>
+      <TabletContainer resolution={resolution}>{contents}</TabletContainer>
       <h3>
         Resolution {resolution.width} X {resolution.height}
       </h3>
-      <TabletContainer resolution={resolution}>{contents}</TabletContainer>
     </>
   );
 };

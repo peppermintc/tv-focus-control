@@ -21,10 +21,10 @@ const MobileContainer = styled.div<MobileProps>`
 const Mobile = ({ resolution, contents }: MobileProps) => {
   return (
     <>
+      <MobileContainer resolution={resolution}>{contents}</MobileContainer>
       <h3>
         Resolution {resolution.width} X {resolution.height}
       </h3>
-      <MobileContainer resolution={resolution}>{contents}</MobileContainer>
     </>
   );
 };
