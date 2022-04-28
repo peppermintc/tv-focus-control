@@ -5,12 +5,12 @@ interface Resolution {
   height: number;
 }
 
-interface TVProps {
+interface TabletProps {
   resolution: Resolution;
   contents?: React.ReactNode;
 }
 
-const TVContainer = styled.div<TVProps>`
+const TabletContainer = styled.div<TabletProps>`
   box-sizing: content-box;
   border: 5px solid #000000;
   border-radius: 8px;
@@ -18,15 +18,15 @@ const TVContainer = styled.div<TVProps>`
   height: ${(props) => `calc(${props.resolution.height}px / 2)`};
 `;
 
-const TV = ({ resolution, contents }: TVProps) => {
+const Tablet = ({ resolution, contents }: TabletProps) => {
   return (
     <>
       <h3>
         Resolution {resolution.width} X {resolution.height}
       </h3>
-      <TVContainer resolution={resolution}>{contents}</TVContainer>
+      <TabletContainer resolution={resolution}>{contents}</TabletContainer>
     </>
   );
 };
 
-export default TV;
+export default Tablet;

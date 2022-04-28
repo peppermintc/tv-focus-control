@@ -25,7 +25,6 @@ const Mobile = ({ resolution, contents }: MobileProps) => {
         Resolution {resolution.width} X {resolution.height}
       </h3>
       <MobileContainer resolution={resolution}>{contents}</MobileContainer>
-      <h4>실제 픽셀 크기입니다</h4>
     </>
   );
 };
