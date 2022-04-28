@@ -18,7 +18,15 @@ const TVContainer = styled.div<TVProps>`
 `;
 
 const TV = ({ resolution }: TVProps) => {
-  return <TVContainer resolution={resolution}>TV</TVContainer>;
+  return (
+    <>
+      <h3>
+        Resolution {resolution.width} X {resolution.height}
+      </h3>
+      <TVContainer resolution={resolution}>TV</TVContainer>
+      <h4>실제 픽셀보다 2배 축소된 크기입니다</h4>
+    </>
+  );
 };
 
 export default TV;
