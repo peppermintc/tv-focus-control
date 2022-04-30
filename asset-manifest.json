@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tv-focus-control/static/css/main.1574afd9.css",
-    "main.js": "/tv-focus-control/static/js/main.bbd97b00.js",
+    "main.js": "/tv-focus-control/static/js/main.c5ae4f65.js",
     "index.html": "/tv-focus-control/index.html",
     "main.1574afd9.css.map": "/tv-focus-control/static/css/main.1574afd9.css.map",
-    "main.bbd97b00.js.map": "/tv-focus-control/static/js/main.bbd97b00.js.map"
+    "main.c5ae4f65.js.map": "/tv-focus-control/static/js/main.c5ae4f65.js.map"
   },
   "entrypoints": [
     "static/css/main.1574afd9.css",
-    "static/js/main.bbd97b00.js"
+    "static/js/main.c5ae4f65.js"
   ]
 }
