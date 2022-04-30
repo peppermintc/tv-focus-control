@@ -7,7 +7,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import NavigationBar from "./components/common/NavigationBar";
 import { useState } from "react";
 import { VALUE_ARRAYS } from "./data";
-import HelloWatcha from "./components/common/HelloWatcha";
 
 const App = () => {
   const [valueArrayIndex, setValueArrayIndex] = useState<number>(0);
@@ -28,7 +27,6 @@ const App = () => {
         />
         <Route path="/ipad" element={<IPad6Page valueArray={valueArray} />} />
       </Routes>
-      <HelloWatcha />
     </>
   );
 };
